@@ -39,15 +39,6 @@ body {
   gap: 22px;
 }
 
-#answers,
-#definitions
-{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 6px 12px;
-}
-
 input,
 .word
 {
@@ -86,103 +77,66 @@ input.failed {
 
   animation: 200ms failed-shake forwards linear;
 }
-
-.word {
-  flex-grow: 1;
-  background-color: var(--word-background);
-  border-color: var(--word-border);
-}
-
-#answers .word {
-  background-color: var(--word-answers-background);
-  border-color: var(--word-answers-border);
-}
-
-#word-type {
-  color: var(--type-text);
-  font-weight: 800;
-  font-size: 16pt;
-  text-transform: uppercase;
-}
-
-#word-type.noun {
-  color: var(--type-noun-text);
-}
-
-#word-type.verb {
-  color: var(--type-verb-text);
-}
-
-#word-type.pre-verb {
-  color: var(--type-pre-verb-text);
-}
-
-#word-type.adjective {
-  color: var(--type-adjective-text);
-}
-
-#word-type.preposition {
-  color: var(--type-preposition-text);
-}
-
-#word-type.particle {
-  color: var(--type-particle-text);
-}
-
-#word-type.number {
-  color: var(--type-number-text);
-}
 </style>
 
 <template>
-  <span id="word-type"
-    :class="word.type">
-    {{ word.type }}
-  </span>
-
-  <div id="definitions">
-    <span class="word"
-      v-for="definition of word.english"
-      :key="definition">
-      {{ definition }}
-    </span>
-  </div>
+  <WordType :type="word.type" />
+  <Definitions :definitions="word.english" />
 
   <input type="text"
+    placeholder="type here"
     v-model="input"
+    :class="{ failed: isFailed }"
     :answers="word.toki"
-    @keydown="checkWord"
-    :class="{ failed: isFailed }">
+    @keydown="checkWord">
 
-  <div id="answers">
-    <div class="word"
-      v-for="word of answers"
-      :key="word">
-      {{ word }}
-    </div>
-  </div>
+  <Answers :answers="answers" />
 </template>
 
 <script>
+import WordType from "./components/WordType.vue";
+import Definitions from "./components/Definitions.vue";
+import Answers from "./components/Answers.vue";
+
 import dictionary from "./assets/dictionary.json";
+
+// all toki pona words
+const wordsToki = dictionary.map((word)=> word.toki)
+  .flat().sort()
+
+// remove duplicates
+for (let i = wordsToki.length - 1; i >= 0; i--)
+  if (wordsToki[i] === wordsToki[i+1])
+    wordsToki.splice(i+1, 1);
+
+// TODO
+// ADD STATS (POPOUT)
+// - MASTERY % GRAPH
+// - KEY PRESSES
 
 export default {
   name: "App",
+  components: {
+    WordType,
+    Definitions,
+    Answers,
+  },
   data() {
     return {
       word: {},
       input: "",
-      answers: ["acidic"],
+      answers: [],
       isFailed: false,
     }
   },
   methods: {
+    randomWord() {
+      return dictionary[Math.floor(Math.random() * dictionary.length)];
+    },
     newWord() {
       this.isFailed = "";
-      this.answers = "";
-
-      this.word = dictionary[Math.floor(Math.random() * dictionary.length)];
-      console.log(this.word.toki);
+      this.answers = [];
+      this.word = this.randomWord();
     },
     async checkWord(keyboardEvent) {
       await new Promise((resolve)=> setTimeout(resolve));
