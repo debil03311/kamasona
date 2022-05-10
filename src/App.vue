@@ -10,8 +10,25 @@
   100% { transform: translateX(0); }
 }
 
+::-webkit-scrollbar,
+::-webkit-scrollbar-corner
+{
+  --size: 12px;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--scrollbar-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-background);
+}
+
 * {
   box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 body {
@@ -40,36 +57,41 @@ body {
   gap: 22px;
 }
 
-input,
-.word
-{
-  border: solid 1px;
-  border-radius: var(--border-radius);
-  padding: 6px 12px;
+#input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 input {
-  width: 100%;
   background-color: var(--input-background);
   color: var(--input-text);
-  border-color: var(--input-border);
+  border: solid 1px var(--input-border);
   font: inherit;
   font-weight: 800;
   text-align: center;
   outline: none;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  padding: 8px;
   transition: 200ms;
 }
 
 input:hover {
   background-color: var(--input-background-hover);
   color: var(--input-text-hover);
-  border-color: var(--input-border-hover);
+  border-left-color: var(--input-border-hover);
+  border-right-color: var(--input-border-hover);
+  border-left-width: var(--border-radius);
+  border-right-width: var(--border-radius);
 }
 
 input:focus {
   background-color: var(--input-background-focus);
   color: var(--input-text-focus);
-  border-color: var(--input-border-focus);
+  border-left-color: var(--input-border-focus);
+  border-right-color: var(--input-border-focus);
+  border-left-width: var(--border-radius);
+  border-right-width: var(--border-radius);
 }
 
 input.failed {
@@ -82,20 +104,28 @@ input.failed {
 </style>
 
 <template>
-  <WordType :type="word.type" />
   <Definitions :definitions="word.english" />
 
-  <input type="text"
-    placeholder="type here"
-    v-model="input"
-    :class="{ failed: isFailed }"
-    :answers="word.toki"
-    @keydown="checkWord">
+  <div id="input-wrapper">
+    <WordType :type="word.type" />
+
+    <input type="text"
+      placeholder="type here"
+      autofocus
+      v-model="input"
+      :class="{ failed: isFailed }"
+      :answers="word.toki"
+      @keydown="checkWord">
+  </div>
 
   <Answers :answers="answers" />
+
+  <WordStats :stats="stats"
+    :is-invisible="isStatsInvisible"/>
 </template>
 
 <script>
+import WordStats from "./components/WordStats.vue";
 import WordType from "./components/WordType.vue";
 import Definitions from "./components/Definitions.vue";
 import Answers from "./components/Answers.vue";
@@ -103,13 +133,21 @@ import Answers from "./components/Answers.vue";
 import dictionary from "./assets/dictionary.json";
 
 // all toki pona words
-const wordsToki = dictionary.map((word)=> word.toki)
-  .flat().sort()
+const wordsToki = dictionary
+  .map((word)=> word.toki)
+  .flat()
+  .sort()
 
 // remove duplicates
 for (let i = wordsToki.length - 1; i >= 0; i--)
   if (wordsToki[i] === wordsToki[i+1])
     wordsToki.splice(i+1, 1);
+
+const wordStats = wordsToki.map((word)=> ({
+  word: word,
+  seen: 0,
+  failed: 0,
+}));
 
 // TODO
 // ADD STATS (POPOUT)
@@ -119,6 +157,7 @@ for (let i = wordsToki.length - 1; i >= 0; i--)
 export default {
   name: "App",
   components: {
+    WordStats,
     WordType,
     Definitions,
     Answers,
@@ -129,6 +168,8 @@ export default {
       input: "",
       answers: [],
       isFailed: false,
+      stats: wordStats,
+      isStatsInvisible: true,
     }
   },
   methods: {
@@ -158,7 +199,21 @@ export default {
   },
   mounted() {
     this.newWord();
-    // this.answers = this.word.toki;
+
+    window.addEventListener("keydown", (keyboardEvent)=> {
+      if (keyboardEvent.key == "Tab") {
+        keyboardEvent.preventDefault();
+
+        if (!keyboardEvent.repeat)
+          this.isStatsInvisible = false;
+      }
+    });
+
+    window.addEventListener("keyup", (keyboardEvent)=> {
+      if (keyboardEvent.key == "Tab") {
+        this.isStatsInvisible = true;
+      }
+    });
   }
 }
 </script>

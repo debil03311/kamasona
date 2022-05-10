@@ -1,13 +1,12 @@
 <style scoped>
 #word-type {
-  width: max-content;
   background-color: var(--type-background);
   color: var(--type-text);
   font-weight: 800;
   font-size: 11pt;
   text-transform: uppercase;
-  border-radius: var(--border-radius);
-  padding: 4px 10px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding: 6px;
 }
 
 #word-type.noun {

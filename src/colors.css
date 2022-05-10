@@ -1,12 +1,14 @@
 :root {
+  --scrollbar-background: #434C5E;
+  --scrollbar-thumb-background: #88C0D0;
+
   --type-noun-text: #B48EAD;
   --type-verb-text: #88C0D0;
   --type-pre-verb-text: #A3BE8C;
   --type-adjective-text: #D08770;
   --type-preposition-text: #8FBCBB;
   --type-particle-text: #D8DEE9;
-  /* Red is kinda bad but I'm running out of Nord colors */
-  --type-number-text: #BF616A;
+  --type-number-text: #EBCB8B;
 
   --type-background: #2E3440;
 
@@ -20,19 +22,23 @@
   --word-answers-background: #434C5E;
   --word-answers-border: #A3BE8C;
 
-  --input-text: #EBCB8B;
+  --input-text: #ECEFF4;
   --input-background: #434C5E;
-  --input-border: #EBCB8B;
+  --input-border: #2E3440;
 
   --input-text-hover: #88C0D0;
   --input-background-hover: #434C5E;
-  --input-border-hover: #88C0D0;
+  --input-border-hover: #2E3440;
 
-  --input-text-focus: #ECEFF4;
+  --input-text-focus: #EBCB8B;
   --input-background-focus: #434C5E;
-  --input-border-focus: #D8DEE9;
+  --input-border-focus: #EBCB8B;
 
   --input-failed-text: #ECEFF4;
   --input-failed-background: #434C5E;
   --input-failed-border: #BF616A;
+
+  --stats-background: #434C5E;
+  --stats-progress-background: #816a7d;
+  --stats-item-border: #2E3440;
 }

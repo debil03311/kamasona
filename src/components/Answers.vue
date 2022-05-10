@@ -24,7 +24,7 @@
 import TextItem from "./TextItem.vue";
 
 export default {
-  name: "Definitions",
+  name: "Answers",
   components: {
     TextItem,
   },
