@@ -36,6 +36,7 @@ body {
 
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
   gap: 22px;
 }
 
@@ -48,6 +49,7 @@ input,
 }
 
 input {
+  width: 100%;
   background-color: var(--input-background);
   color: var(--input-text);
   border-color: var(--input-border);
