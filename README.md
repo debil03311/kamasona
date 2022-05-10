@@ -31,4 +31,8 @@ npm run build
 
 ![Normal typing state](screenshots/normal.png)
 
+![Typing state](screenshots/focused.png)
+
 ![Failure state](screenshots/failure.png)
+
+![Statistics](screenshots/stats.png)
