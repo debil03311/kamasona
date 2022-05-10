@@ -1,6 +1,8 @@
 {
-  "name": "sona",
+  "name": "kamasona",
+  "description": "Random toki pona flashcard webapp",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -13,5 +15,18 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-service": "~5.0.0"
+  },
+  "funding": {
+    "type": "ko-fi",
+    "url": "https://ko-fi.com/hosma"
+  },
+  "author": {
+    "name": "Henț Andrei",
+    "email": "andrei.hent@gmail.com",
+    "url": "https://hosma.neocities.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debil03311/kamasona.git"
   }
 }

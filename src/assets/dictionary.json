@@ -1,0 +1,1671 @@
+[
+    {
+        "type": "particle",
+        "toki": [
+            "a",
+            "kin"
+        ],
+        "english": [
+            "emphasis",
+            "emotion",
+            "confirmation"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "akesi"
+        ],
+        "english": [
+            "non-cute animal",
+            "reptile",
+            "amphibian"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "ala"
+        ],
+        "english": [
+            "no",
+            "not",
+            "zero"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "alasa"
+        ],
+        "english": [
+            "hunt",
+            "forage"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "ale",
+            "ali"
+        ],
+        "english": [
+            "all",
+            "abundant",
+            "countless",
+            "bountiful",
+            "every",
+            "plentiful"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "ale",
+            "ali"
+        ],
+        "english": [
+            "abundance",
+            "everything",
+            "life",
+            "universe"
+        ]
+    },
+    {
+        "type": "number",
+        "toki": [
+            "ale",
+            "ali"
+        ],
+        "english": [
+            "100",
+            "hundred",
+            "a hundred",
+            "one hundred"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "anpa"
+        ],
+        "english": [
+            "bowing down",
+            "downward",
+            "humble",
+            "lowly",
+            "dependent"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "ante"
+        ],
+        "english": [
+            "different",
+            "altered",
+            "changed",
+            "other"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "anu"
+        ],
+        "english": [
+            "or"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "awen"
+        ],
+        "english": [
+            "enduring",
+            "kept",
+            "protected",
+            "safe",
+            "waiting",
+            "staying"
+        ]
+    },
+    {
+        "type": "pre-verb",
+        "toki": [
+            "awen"
+        ],
+        "english": [
+            "continue to"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "e"
+        ],
+        "english": [
+            "direct object",
+            "before the direct object"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "en"
+        ],
+        "english": [
+            "between multiple subjects"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "esun"
+        ],
+        "english": [
+            "market",
+            "shop",
+            "fair",
+            "bazaar",
+            "transaction",
+            "business transaction"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "ijo"
+        ],
+        "english": [
+            "thing",
+            "phenomenon",
+            "object",
+            "matter"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "ike"
+        ],
+        "english": [
+            "bad",
+            "negative",
+            "unessential",
+            "non-essential",
+            "irrelevant"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "ilo"
+        ],
+        "english": [
+            "tool",
+            "implement",
+            "machine",
+            "device"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "insa"
+        ],
+        "english": [
+            "centre",
+            "content",
+            "inside",
+            "between",
+            "organ",
+            "internal organ",
+            "stomach"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "jaki"
+        ],
+        "english": [
+            "disgusting",
+            "obscene",
+            "sickly",
+            "toxic",
+            "unclean",
+            "unsanitary"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "jan"
+        ],
+        "english": [
+            "human",
+            "human being",
+            "person",
+            "somebody"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "jelo"
+        ],
+        "english": [
+            "yellow",
+            "yellowish"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "jo"
+        ],
+        "english": [
+            "have",
+            "carry",
+            "contain",
+            "hold"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "kala"
+        ],
+        "english": [
+            "fish",
+            "marine animal",
+            "sea creature"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "kalama"
+        ],
+        "english": [
+            "make sound",
+            "make a sound",
+            "produce sound",
+            "produce a sound",
+            "recite",
+            "utter",
+            "utter aloud"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "kama"
+        ],
+        "english": [
+            "arriving",
+            "coming",
+            "future",
+            "summoned"
+        ]
+    },
+    {
+        "type": "pre-verb",
+        "toki": [
+            "kama"
+        ],
+        "english": [
+            "become",
+            "manage",
+            "manage to",
+            "succeed",
+            "succeed in"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "kasi"
+        ],
+        "english": [
+            "plant",
+            "vegetation",
+            "herb",
+            "leaf"
+        ]
+    },
+    {
+        "type": "pre-verb",
+        "toki": [
+            "ken"
+        ],
+        "english": [
+            "be able to",
+            "be allowed to",
+            "can",
+            "may"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "ken"
+        ],
+        "english": [
+            "possible"
+        ]
+    },
+    {
+        "type": "preposition",
+        "toki": [
+            "kepeken"
+        ],
+        "english": [
+            "use",
+            "with",
+            "by means of"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "kili"
+        ],
+        "english": [
+            "fruit",
+            "vegetable",
+            "mushroom"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "kiwen"
+        ],
+        "english": [
+            "hard object",
+            "metal",
+            "rock",
+            "stone"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "ko"
+        ],
+        "english": [
+            "clay",
+            "clinging form",
+            "dough",
+            "semi-solid",
+            "paste",
+            "powder"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "kon"
+        ],
+        "english": [
+            "air",
+            "breath",
+            "essence",
+            "spirit",
+            "hidden reality",
+            "unseen agent"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "kule"
+        ],
+        "english": [
+            "colourful",
+            "pigmented",
+            "painted"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "kulupu"
+        ],
+        "english": [
+            "community",
+            "company",
+            "group",
+            "nation",
+            "society",
+            "tribe"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "kute"
+        ],
+        "english": [
+            "ear"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "kute"
+        ],
+        "english": [
+            "hear",
+            "listen",
+            "pay attention to",
+            "obey"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "la"
+        ],
+        "english": [
+            "between the context phrase and the main sentence"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "lape"
+        ],
+        "english": [
+            "sleeping",
+            "resting"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "laso"
+        ],
+        "english": [
+            "blue",
+            "green"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "lawa"
+        ],
+        "english": [
+            "head",
+            "mind"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "lawa"
+        ],
+        "english": [
+            "control",
+            "direct",
+            "guide",
+            "lead",
+            "own",
+            "plan",
+            "regulate",
+            "rule"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "len"
+        ],
+        "english": [
+            "cloth",
+            "clothing",
+            "fabric",
+            "textile",
+            "cover",
+            "layer of privacy"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "lete"
+        ],
+        "english": [
+            "cold",
+            "cool",
+            "uncooked",
+            "raw"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "li"
+        ],
+        "english": [
+            "between any subject except mi alone",
+            "sina alone and its "
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "lili"
+        ],
+        "english": [
+            "little",
+            "small",
+            "short",
+            "few",
+            "a bit",
+            "young"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "linja"
+        ],
+        "english": [
+            "long and flexible thing",
+            "cord",
+            "hair",
+            "rope",
+            "thread",
+            "yarn"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "lipu"
+        ],
+        "english": [
+            "flat object",
+            "book",
+            "document",
+            "card",
+            "paper",
+            "record",
+            "website"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "loje"
+        ],
+        "english": [
+            "red",
+            "reddish"
+        ]
+    },
+    {
+        "type": "preposition",
+        "toki": [
+            "lon"
+        ],
+        "english": [
+            "located at",
+            "present at",
+            "real",
+            "true",
+            "existing"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "luka"
+        ],
+        "english": [
+            "arm",
+            "hand",
+            "tactile organ"
+        ]
+    },
+    {
+        "type": "number",
+        "toki": [
+            "luka"
+        ],
+        "english": [
+            "five"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "lukin",
+            "oko"
+        ],
+        "english": [
+            "eye"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "lukin",
+            "oko"
+        ],
+        "english": [
+            "look at",
+            "see",
+            "examine",
+            "observe",
+            "read",
+            "watch"
+        ]
+    },
+    {
+        "type": "pre-verb",
+        "toki": [
+            "lukin",
+            "oko"
+        ],
+        "english": [
+            "seek",
+            "look for",
+            "try to"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "lupa"
+        ],
+        "english": [
+            "door",
+            "hole",
+            "orifice",
+            "window"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "ma"
+        ],
+        "english": [
+            "earth",
+            "land",
+            "outdoors",
+            "world",
+            "country",
+            "territory",
+            "soil"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "mama"
+        ],
+        "english": [
+            "parent",
+            "ancestor",
+            "creator",
+            "originator",
+            "caretaker",
+            "sustainer"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "mani"
+        ],
+        "english": [
+            "money",
+            "cash",
+            "savings",
+            "wealth",
+            "large domesticated animal"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "meli"
+        ],
+        "english": [
+            "woman",
+            "female",
+            "feminine person",
+            "wife"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "mi"
+        ],
+        "english": [
+            "I",
+            "me",
+            "we",
+            "us"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "mije"
+        ],
+        "english": [
+            "man",
+            "male",
+            "masculine person",
+            "husband"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "moku"
+        ],
+        "english": [
+            "eat",
+            "drink",
+            "consume",
+            "swallow",
+            "ingest"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "moli"
+        ],
+        "english": [
+            "dead",
+            "dying"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "monsi"
+        ],
+        "english": [
+            "back",
+            "behind",
+            "rear"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "mu"
+        ],
+        "english": [
+            "animal noise",
+            "communication"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "mun"
+        ],
+        "english": [
+            "moon",
+            "night sky object",
+            "star"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "musi"
+        ],
+        "english": [
+            "artistic",
+            "entertaining",
+            "frivolous",
+            "playful",
+            "recreational"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "mute"
+        ],
+        "english": [
+            "many",
+            "a lot",
+            "more",
+            "much",
+            "several",
+            "very"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "mute"
+        ],
+        "english": [
+            "quantity"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "nanpa"
+        ],
+        "english": [
+            "th",
+            "-th",
+            "ordinal number"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "nanpa"
+        ],
+        "english": [
+            "numbers"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "nasa"
+        ],
+        "english": [
+            "unusual",
+            "strange",
+            "foolish",
+            "crazy",
+            "drunk",
+            "intoxicated"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "nasin"
+        ],
+        "english": [
+            "way",
+            "custom",
+            "doctrine",
+            "method",
+            "path",
+            "road"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "nena"
+        ],
+        "english": [
+            "bump",
+            "button",
+            "hill",
+            "mountain",
+            "nose",
+            "protuberance"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "ni"
+        ],
+        "english": [
+            "that",
+            "this"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "nimi"
+        ],
+        "english": [
+            "name",
+            "word"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "noka"
+        ],
+        "english": [
+            "foot",
+            "leg",
+            "organ of locomotion",
+            "bottom",
+            "lower part"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "o"
+        ],
+        "english": [
+            "hey",
+            "o",
+            "vocative",
+            "imperative"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "olin"
+        ],
+        "english": [
+            "love",
+            "have compassion for",
+            "respect",
+            "show affection to"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "ona"
+        ],
+        "english": [
+            "he",
+            "she",
+            "it",
+            "they"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "open"
+        ],
+        "english": [
+            "begin",
+            "start",
+            "open",
+            "turn on"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "pakala"
+        ],
+        "english": [
+            "botched",
+            "broken",
+            "damaged",
+            "harmed",
+            "messed up"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "pali"
+        ],
+        "english": [
+            "do",
+            "take action on",
+            "work on",
+            "build",
+            "make",
+            "prepare"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "palisa"
+        ],
+        "english": [
+            "long hard thing",
+            "branch",
+            "rod",
+            "stick"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "pan"
+        ],
+        "english": [
+            "cereal",
+            "grain",
+            "barley",
+            "corn",
+            "oat",
+            "rice",
+            "wheat",
+            "bread",
+            "pasta"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "pana"
+        ],
+        "english": [
+            "give",
+            "send",
+            "emit",
+            "provide",
+            "put",
+            "release"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "pi"
+        ],
+        "english": [
+            "of"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "pilin"
+        ],
+        "english": [
+            "heart",
+            "emotional"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "pilin"
+        ],
+        "english": [
+            "feeling",
+            "emotion",
+            "experience",
+            "direct experience"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "pimeja"
+        ],
+        "english": [
+            "black",
+            "dark",
+            "unlit"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "pini"
+        ],
+        "english": [
+            "ago",
+            "completed",
+            "ended",
+            "finished",
+            "past"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "pipi"
+        ],
+        "english": [
+            "bug",
+            "insect",
+            "ant",
+            "spider"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "poka"
+        ],
+        "english": [
+            "hip",
+            "side",
+            "next to",
+            "nearby",
+            "vicinity"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "poki"
+        ],
+        "english": [
+            "container",
+            "bag",
+            "bowl",
+            "box",
+            "cup",
+            "cupboard",
+            "drawer",
+            "vessel"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "pona"
+        ],
+        "english": [
+            "good",
+            "positive",
+            "useful",
+            "friendly",
+            "peaceful",
+            "simple"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "pu"
+        ],
+        "english": [
+            "interacting with the official Toki Pona book"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "sama"
+        ],
+        "english": [
+            "same",
+            "similar",
+            "each other",
+            "sibling",
+            "peer",
+            "fellow"
+        ]
+    },
+    {
+        "type": "preposition",
+        "toki": [
+            "sama"
+        ],
+        "english": [
+            "as",
+            "like"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "seli"
+        ],
+        "english": [
+            "fire",
+            "cooking element",
+            "chemical reaction",
+            "heat source"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "selo"
+        ],
+        "english": [
+            "outer form",
+            "outer layer",
+            "bark",
+            "peel",
+            "shell",
+            "skin",
+            "boundary"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "seme"
+        ],
+        "english": [
+            "what? which?"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "sewi"
+        ],
+        "english": [
+            "area above",
+            "highest part",
+            "something elevated"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "sewi"
+        ],
+        "english": [
+            "awe-inspiring",
+            "divine",
+            "sacred",
+            "supernatural"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "sijelo"
+        ],
+        "english": [
+            "body (of person)",
+            "animal",
+            "physical state",
+            "torso"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "sike"
+        ],
+        "english": [
+            "round",
+            "circular thing",
+            "ball",
+            "circle",
+            "cycle",
+            "sphere",
+            "wheel"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "sin",
+            "namako"
+        ],
+        "english": [
+            "new",
+            "fresh",
+            "additional",
+            "another",
+            "extra"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "sina"
+        ],
+        "english": [
+            "you"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "sinpin"
+        ],
+        "english": [
+            "face",
+            "foremost",
+            "front",
+            "wall"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "sitelen"
+        ],
+        "english": [
+            "image",
+            "picture",
+            "representation",
+            "symbol",
+            "mark",
+            "writing"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "sona"
+        ],
+        "english": [
+            "know",
+            "be skilled in",
+            "be wise about",
+            "have information on"
+        ]
+    },
+    {
+        "type": "pre-verb",
+        "toki": [
+            "sona"
+        ],
+        "english": [
+            "know how to"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "soweli"
+        ],
+        "english": [
+            "animal",
+            "beast",
+            "land mammal"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "suli"
+        ],
+        "english": [
+            "big",
+            "heavy",
+            "large",
+            "long",
+            "tall",
+            "important",
+            "adult"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "suno"
+        ],
+        "english": [
+            "sun",
+            "light",
+            "brightness",
+            "glow",
+            "radiance",
+            "shine",
+            "light source"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "supa"
+        ],
+        "english": [
+            "horizontal surface",
+            "thing to put",
+            "rest something on"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "suwi"
+        ],
+        "english": [
+            "sweet",
+            "fragrant",
+            "cute",
+            "innocent",
+            "adorable"
+        ]
+    },
+    {
+        "type": "preposition",
+        "toki": [
+            "tan"
+        ],
+        "english": [
+            "by",
+            "from",
+            "because of"
+        ]
+    },
+    {
+        "type": "particle",
+        "toki": [
+            "taso"
+        ],
+        "english": [
+            "but",
+            "however"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "taso"
+        ],
+        "english": [
+            "only"
+        ]
+    },
+    {
+        "type": "preposition",
+        "toki": [
+            "tawa"
+        ],
+        "english": [
+            "going to",
+            "toward",
+            "for",
+            "from the perspective of"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "tawa"
+        ],
+        "english": [
+            "moving"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "telo"
+        ],
+        "english": [
+            "water",
+            "liquid",
+            "fluid",
+            "wet substance",
+            "beverage"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "tenpo"
+        ],
+        "english": [
+            "time",
+            "duration",
+            "moment",
+            "occasion",
+            "period",
+            "situation"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "toki"
+        ],
+        "english": [
+            "communicate",
+            "say",
+            "speak",
+            "say",
+            "talk",
+            "use language",
+            "think"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "tomo"
+        ],
+        "english": [
+            "indoor space",
+            "building",
+            "home",
+            "house",
+            "room"
+        ]
+    },
+    {
+        "type": "number",
+        "toki": [
+            "tu"
+        ],
+        "english": [
+            "two"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "unpa"
+        ],
+        "english": [
+            "have sexual",
+            "marital relations with"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "uta"
+        ],
+        "english": [
+            "mouth",
+            "lips",
+            "oral cavity",
+            "jaw"
+        ]
+    },
+    {
+        "type": "verb",
+        "toki": [
+            "utala"
+        ],
+        "english": [
+            "battle",
+            "challenge",
+            "compete against",
+            "struggle against"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "walo"
+        ],
+        "english": [
+            "white",
+            "whitish",
+            "light-coloured",
+            "pale"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "wan"
+        ],
+        "english": [
+            "unique",
+            "united"
+        ]
+    },
+    {
+        "type": "number",
+        "toki": [
+            "wan"
+        ],
+        "english": [
+            "one"
+        ]
+    },
+    {
+        "type": "noun",
+        "toki": [
+            "waso"
+        ],
+        "english": [
+            "bird",
+            "flying creature",
+            "winged animal"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "wawa"
+        ],
+        "english": [
+            "strong",
+            "powerful",
+            "confident",
+            "sure",
+            "energetic",
+            "intense"
+        ]
+    },
+    {
+        "type": "adjective",
+        "toki": [
+            "weka"
+        ],
+        "english": [
+            "absent",
+            "away",
+            "ignored"
+        ]
+    },
+    {
+        "type": "pre-verb",
+        "toki": [
+            "wile"
+        ],
+        "english": [
+            "must",
+            "need",
+            "require",
+            "should",
+            "want",
+            "wish"
+        ]
+    }
+]
