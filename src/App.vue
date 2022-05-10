@@ -168,6 +168,7 @@ export default {
       input: "",
       answers: [],
       isFailed: false,
+
       stats: wordStats,
       isStatsInvisible: true,
     }
@@ -180,6 +181,10 @@ export default {
       this.isFailed = "";
       this.answers = [];
       this.word = this.randomWord();
+      console.log(this.word.toki);
+
+      this.stats.find((item)=> this.word.toki.includes(item.word))
+        .seen += 1
     },
     async checkWord(keyboardEvent) {
       await new Promise((resolve)=> setTimeout(resolve));
@@ -195,6 +200,9 @@ export default {
     failWord() {
       this.answers = this.word.toki;
       this.isFailed = true;
+
+      this.stats.find((item)=> this.word.toki.includes(item.word))
+        .failed += 1
     }
   },
   mounted() {

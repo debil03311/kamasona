@@ -1,24 +1,11 @@
 <style scoped>
 .stats-item {
-  --padding: 6px;
-  position: relative;
   border: solid 1px var(--stats-item-border);
   border-radius: var(--border-radius);
   padding-bottom: var(--padding);
 
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--padding);
-}
-
-.progress-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: var(--stats-progress-background);
-  border-radius: var(--border-radius);
-  z-index: -1;
 }
 
 .stats-word {
@@ -28,6 +15,24 @@
   padding: 4px;
 }
 
+.stats-info {
+  position: relative;
+  padding: 4px;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--stats-progress-background);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  z-index: -1;
+}
+
 .stats-seen-failed {
   font-size: 10pt;
 }
@@ -35,10 +40,13 @@
 
 <template>
   <div class="stats-item">
-    <div class="progress-bar" :style="{ width: `${retention}%`}"></div>
     <span class="stats-word">{{ item.word }}</span>
-    <span class="stats-retention">{{ retention }}%</span>
-    <span class="stats-seen-failed">{{ item.failed }}/{{ item.seen }}</span>
+
+    <div class="stats-info">
+      <div class="progress-bar" :style="{ width: `${retention}%`}"></div>
+      <span class="stats-retention">{{ retention }}%</span>
+      <span class="stats-seen-failed">F:{{ item.failed }} S:{{ item.seen }}</span>
+    </div>
   </div>
 </template>
 
@@ -50,14 +58,18 @@ export default {
   },
   data() {
     return {
-      // percentage
-      retention: Math.round(this.item.failed / this.item.seen * 100),
+      retention: 100,
     }
   },
-  beforeMount() {
-    this.item.seen = Math.floor(Math.random() * 64);
-    this.item.failed = Math.floor(Math.random() * this.item.seen);
-    this.retention = Math.round(this.item.failed / this.item.seen * 100);
+  watch: {
+    item: {
+      deep: true,
+      immediate: false,
+      handler(v) {
+        this.retention =
+          100 - Math.round(this.item.failed / this.item.seen * 100);
+      }
+    }
   }
 }
 </script>
