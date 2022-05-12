@@ -103,6 +103,21 @@ input.failed {
   border-right-color: var(--input-border-failed);
   animation: 200ms failed-shake forwards linear;
 }
+
+#shameless {
+  position: fixed;
+  bottom: 10px;
+  right: 16px;
+  font-size: 10pt;
+  color: #FFFF63 !important;
+  text-decoration: none;
+  opacity: .4;
+  transition: 400ms;
+}
+
+#shameless:hover {
+  opacity: 1;
+}
 </style>
 
 <template>
@@ -125,6 +140,10 @@ input.failed {
   <WordStats :batches="batches"
     :is-invisible="isStatsInvisible"
     @rowStateChange="toggleRowState" />
+
+  <a id="shameless"
+    href="https://ko-fi.com/hosma"
+    title="thanks :)">ko-fi</a>
 </template>
 
 <script>
