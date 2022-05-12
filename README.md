@@ -10,6 +10,10 @@ You can view your statistics (i.e. mastery/retention) of the words by pressing a
 
 The `@/src/assets/dictionary.json` file is a parsed and slightly re-formatted version of [the dictionary](http://tokipona.net/tp/janpije/dictionary.php) that's available on the official toki pona site.
 
+If you found this project helpful or just happen to like it, please consider supporting me :)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K5646GK)
+
 ## Project setup
 
 ### Install dependencies
