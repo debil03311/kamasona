@@ -4,16 +4,9 @@
   border: solid 1px var(--stats-item-border);
   border-radius: var(--border-radius);
   padding-bottom: var(--padding);
-  transition: 200ms;
 
   display: flex;
   flex-flow: column nowrap;
-}
-
-.stats-row:hover .stats-item,
-.stats-row.active .stats-item
-{
-  background-color: var(--stats-row-background-hover);
 }
 
 .stats-word {
@@ -25,6 +18,13 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  transition: 200ms;
+}
+
+.stats-row:hover .stats-word,
+.stats-row.active .stats-word
+{
+  color: var(--stats-row-background-hover);
 }
 
 .stats-info {
@@ -42,7 +42,14 @@
   height: 100%;
   background-color: var(--stats-progress-background);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
+  transition: 200ms;
   z-index: -1;
+}
+
+.stats-row:hover .progress-bar,
+.stats-row.active .progress-bar
+{
+  background-color: var(--stats-row-background-hover);
 }
 
 .stats-seen-failed {
