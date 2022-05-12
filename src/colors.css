@@ -34,11 +34,13 @@
   --input-background-focus: #434C5E;
   --input-border-focus: #EBCB8B;
 
-  --input-failed-text: #ECEFF4;
-  --input-failed-background: #434C5E;
-  --input-failed-border: #BF616A;
+  --input-text-failed: #ECEFF4;
+  --input-background-failed: #434C5E;
+  --input-border-failed: #BF616A;
 
   --stats-background: #434C5E;
   --stats-progress-background: #816a7d;
   --stats-item-border: #2E3440;
+
+  --stats-row-background-hover: #659dac;
 }

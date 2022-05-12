@@ -1,11 +1,19 @@
 <style scoped>
 .stats-item {
+  min-width: 64px;
   border: solid 1px var(--stats-item-border);
   border-radius: var(--border-radius);
   padding-bottom: var(--padding);
+  transition: 200ms;
 
   display: flex;
   flex-flow: column nowrap;
+}
+
+.stats-row:hover .stats-item,
+.stats-row.active .stats-item
+{
+  background-color: var(--stats-row-background-hover);
 }
 
 .stats-word {
@@ -13,6 +21,10 @@
   font-weight: 600;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   padding: 4px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .stats-info {

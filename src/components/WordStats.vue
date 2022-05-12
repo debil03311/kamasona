@@ -6,14 +6,14 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--stats-background);
-  overflow: auto;
   padding: 1em;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 128px);
-  justify-content: center;
-  gap: 1em;
   transition: 200ms;
+  overflow: auto;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 1em;
 }
 
 #word-stats.invisible {
@@ -25,23 +25,31 @@
 
 <template>
   <div id="word-stats" :class="{ invisible: isInvisible }">
-    <StatsItem v-for="word of stats"
-      :key="word"
-      :item="word" />
+    <StatsRow v-for="(batch, index) of batches"
+      :key="batch"
+      :row-index="index"
+      :state="batches[index].active"
+      :batch="batch.items"
+      @rowStateChange="propagateRowStateChange" />
   </div>
 </template>
 
 <script>
-import StatsItem from "./StatsItem.vue";
+import StatsRow from "./StatsRow.vue";
 
 export default {
   name: "WordStats",
   components: {
-    StatsItem,
+    StatsRow,
   },
   props: {
-    stats: Array,
+    batches: Array,
     isInvisible: Boolean,
+  },
+  methods: {
+    propagateRowStateChange(rowIndex, newState) {
+      this.$emit("rowStateChange", rowIndex, newState);
+    }
   }
 }
 </script>

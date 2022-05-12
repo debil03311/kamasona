@@ -66,11 +66,12 @@ body {
 input {
   background-color: var(--input-background);
   color: var(--input-text);
-  border: solid 1px var(--input-border);
   font: inherit;
   font-weight: 800;
   text-align: center;
   outline: none;
+  border: solid 1px var(--input-border);
+  border-top: none;
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   padding: 8px;
   transition: 200ms;
@@ -81,8 +82,8 @@ input:hover {
   color: var(--input-text-hover);
   border-left-color: var(--input-border-hover);
   border-right-color: var(--input-border-hover);
-  border-left-width: var(--border-radius);
-  border-right-width: var(--border-radius);
+  border-left-width: calc(var(--border-radius) + 1px);
+  border-right-width: calc(var(--border-radius) + 1px);
 }
 
 input:focus {
@@ -90,15 +91,16 @@ input:focus {
   color: var(--input-text-focus);
   border-left-color: var(--input-border-focus);
   border-right-color: var(--input-border-focus);
-  border-left-width: var(--border-radius);
-  border-right-width: var(--border-radius);
+  border-left-width: calc(var(--border-radius) + 1px);
+  border-right-width: calc(var(--border-radius) + 1px);
+
 }
 
 input.failed {
-  background-color: var(--input-failed-background);
-  color: var(--input-failed-text);
-  border-color: var(--input-failed-border);
-
+  background-color: var(--input-background-failed);
+  color: var(--input-text-failed);
+  border-left-color: var(--input-border-failed);
+  border-right-color: var(--input-border-failed);
   animation: 200ms failed-shake forwards linear;
 }
 </style>
@@ -120,8 +122,9 @@ input.failed {
 
   <Answers :answers="answers" />
 
-  <WordStats :stats="stats"
-    :is-invisible="isStatsInvisible"/>
+  <WordStats :batches="batches"
+    :is-invisible="isStatsInvisible"
+    @rowStateChange="toggleRowState" />
 </template>
 
 <script>
@@ -149,10 +152,25 @@ const wordStats = wordsToki.map((word)=> ({
   failed: 0,
 }));
 
+const batchSize = 5;
+const batches = [];
+
+for (let i = 0; i < wordStats.length / batchSize; i++) {
+  const batch = wordStats.slice(
+    i*batchSize, (i*batchSize)+batchSize)
+
+  batches.push({
+    items: batch,
+    active: false
+  });
+}
+
+batches[0].active = true;
+
+const randomInArray =(array)=> array[Math.floor(Math.random() * array.length)];
+
 // TODO
-// ADD STATS (POPOUT)
-// - MASTERY % GRAPH
-// - KEY PRESSES
+// FINISH WORD BATHCES
 
 export default {
   name: "App",
@@ -164,24 +182,51 @@ export default {
   },
   data() {
     return {
+      possibleWords: [],
       word: {},
       input: "",
       answers: [],
       isFailed: false,
 
+      batches: batches,
       stats: wordStats,
       isStatsInvisible: true,
     }
   },
+  mounted() {
+    this.rowStates = new Array(this.batches.length)
+      .fill(false)
+
+    this.toggleRowState(0, true);
+    this.newWord();
+
+    window.addEventListener("keydown", (keyboardEvent)=> {
+      if (keyboardEvent.key == "Tab") {
+        keyboardEvent.preventDefault();
+
+        if (!keyboardEvent.repeat)
+          this.isStatsInvisible = false;
+      }
+    });
+
+    window.addEventListener("keyup", (keyboardEvent)=> {
+      if (keyboardEvent.key == "Tab") {
+        this.isStatsInvisible = true;
+      }
+    });
+  },
   methods: {
     randomWord() {
-      return dictionary[Math.floor(Math.random() * dictionary.length)];
+      const wordToki = randomInArray(this.possibleWords);
+      // console.log(wordToki);
+
+      return dictionary.find((entry)=> entry.toki.includes(wordToki));
     },
     newWord() {
       this.isFailed = "";
       this.answers = [];
       this.word = this.randomWord();
-      console.log(this.word.toki);
+      // console.log(this.word.toki);
 
       this.stats.find((item)=> this.word.toki.includes(item.word))
         .seen += 1
@@ -203,25 +248,21 @@ export default {
 
       this.stats.find((item)=> this.word.toki.includes(item.word))
         .failed += 1
+    },
+    toggleRowState(index, newState) {
+      this.batches[index].active = newState;
+
+      if (!this.batches.filter((batch)=> batch.active).length)
+        this.batches[index].active = !newState;
+
+      // console.table(this.batches.map((batch)=> batch.active));
+
+      this.possibleWords = this.batches
+        .filter((batch)=> batch.active)
+        .map((batch)=> batch.items)
+        .flat()
+        .map((item)=> item.word)
     }
   },
-  mounted() {
-    this.newWord();
-
-    window.addEventListener("keydown", (keyboardEvent)=> {
-      if (keyboardEvent.key == "Tab") {
-        keyboardEvent.preventDefault();
-
-        if (!keyboardEvent.repeat)
-          this.isStatsInvisible = false;
-      }
-    });
-
-    window.addEventListener("keyup", (keyboardEvent)=> {
-      if (keyboardEvent.key == "Tab") {
-        this.isStatsInvisible = true;
-      }
-    });
-  }
 }
 </script>
