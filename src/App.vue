@@ -57,6 +57,34 @@ body {
   gap: 22px;
 }
 
+#instructions {
+  --gradient-size: 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    -45deg,
+    #000D 0,
+    #000D var(--gradient-size),
+    #000C var(--gradient-size),
+    #000C calc(var(--gradient-size) * 2));
+  font-size: 6vw;
+  font-weight: 800;
+
+  display: grid;
+  place-items: center;
+}
+
+.keyboard {
+  background-color: #445;
+  border: solid 4px #000;
+  border-radius: var(--border-radius);
+  padding: 0 .3em;
+  text-shadow: 0 0 4px #000;
+}
+
 #input-wrapper {
   width: 100%;
   display: flex;
@@ -106,12 +134,14 @@ input.failed {
 
 #shameless {
   position: fixed;
-  bottom: 10px;
-  right: 16px;
+  bottom: 0;
+  right: 0;
   font-size: 10pt;
+  font-weight: 800;
   color: #FFFF63 !important;
   text-decoration: none;
   opacity: .4;
+  padding: 20px 40px;
   transition: 400ms;
 }
 
@@ -121,6 +151,10 @@ input.failed {
 </style>
 
 <template>
+  <div id="instructions">
+    <span>Press and hold the <code class="keyboard">TAB</code> key to select your words</span>
+  </div>
+
   <Definitions :definitions="word.english" />
 
   <div id="input-wrapper">
@@ -128,7 +162,6 @@ input.failed {
 
     <input type="text"
       placeholder="type here"
-      autofocus
       v-model="input"
       :class="{ failed: isFailed }"
       :answers="word.toki"
@@ -219,6 +252,8 @@ export default {
     this.toggleRowState(0, true);
     this.newWord();
 
+    const instructions = document.getElementById("instructions");
+ 
     window.addEventListener("keydown", (keyboardEvent)=> {
       if (keyboardEvent.key == "Tab") {
         keyboardEvent.preventDefault();
@@ -230,6 +265,7 @@ export default {
 
     window.addEventListener("keyup", (keyboardEvent)=> {
       if (keyboardEvent.key == "Tab") {
+        instructions.hidden = true;
         this.isStatsInvisible = true;
       }
     });
@@ -281,6 +317,8 @@ export default {
         .map((batch)=> batch.items)
         .flat()
         .map((item)=> item.word)
+      
+      this.newWord();
     }
   },
 }
