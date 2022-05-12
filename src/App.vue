@@ -221,9 +221,6 @@ batches[0].active = true;
 
 const randomInArray =(array)=> array[Math.floor(Math.random() * array.length)];
 
-// TODO
-// FINISH WORD BATHCES
-
 export default {
   name: "App",
   components: {
