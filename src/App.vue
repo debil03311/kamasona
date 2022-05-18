@@ -313,12 +313,12 @@ export default {
         .seen += 1
     },
     async checkWord(keyboardEvent) {
-      await new Promise((resolve)=> setTimeout(resolve));
+      await new Promise((resolve)=> setTimeout(resolve, 10));
 
       if (keyboardEvent.key === "Enter")
         return this.failWord();
 
-      if (this.word.toki.includes(this.input)) {
+      if (this.word.toki.includes(this.input.toLowerCase())) {
         this.input = "";
         return this.newWord();
       }
