@@ -21,10 +21,27 @@
   opacity: 0;
   pointer-events: none;
 }
+
+#btn-hide-stats {
+  width: 100%;
+  background-color: var(--open-stats-background);
+  color: var(--open-stats-color);
+  font-size: .8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  padding: 6px;
+  cursor: pointer;
+}
 </style>
 
 <template>
   <div id="word-stats" :class="{ invisible: isInvisible }">
+    <div id="btn-hide-stats"
+      @click="$emit('setStatsInvisible', true)">
+      Close Stats
+    </div>
+
     <StatsRow v-for="(batch, index) of batches"
       :key="batch"
       :row-index="index"

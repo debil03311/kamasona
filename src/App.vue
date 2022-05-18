@@ -148,11 +148,28 @@ input.failed {
 #shameless:hover {
   opacity: 1;
 }
+
+#btn-show-stats {
+  width: 100%;
+  background-color: var(--open-stats-background);
+  color: var(--open-stats-color);
+  font-size: .8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  padding: 6px;
+  cursor: pointer;
+}
 </style>
 
 <template>
   <div id="instructions">
     <span>Press and hold the <code class="keyboard">TAB</code> key to select your words</span>
+  </div>
+
+  <div id="btn-show-stats"
+    @click="setStatsInvisible(false)">
+    Open Stats
   </div>
 
   <Definitions :definitions="word.english" />
@@ -172,7 +189,8 @@ input.failed {
 
   <WordStats :batches="batches"
     :is-invisible="isStatsInvisible"
-    @rowStateChange="toggleRowState" />
+    @rowStateChange="toggleRowState"
+    @setStatsInvisible="setStatsInvisible(true)" />
 
   <a id="shameless"
     href="https://ko-fi.com/hosma"
@@ -256,14 +274,14 @@ export default {
         keyboardEvent.preventDefault();
 
         if (!keyboardEvent.repeat)
-          this.isStatsInvisible = false;
+          this.setStatsInvisible(false);
       }
     });
 
     window.addEventListener("keyup", (keyboardEvent)=> {
       if (keyboardEvent.key == "Tab") {
         instructions.hidden = true;
-        this.isStatsInvisible = true;
+        this.setStatsInvisible(true);
       }
     });
   },
@@ -316,6 +334,9 @@ export default {
         .map((item)=> item.word)
       
       this.newWord();
+    },
+    setStatsInvisible(bool) {
+      this.isStatsInvisible = bool;
     }
   },
 }
