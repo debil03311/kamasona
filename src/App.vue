@@ -313,7 +313,7 @@ export default {
         .seen += 1
     },
     async checkWord(keyboardEvent) {
-      await new Promise((resolve)=> setTimeout(resolve, 10));
+      await new Promise((resolve)=> setTimeout(resolve));
 
       if (keyboardEvent.key === "Enter")
         return this.failWord();
