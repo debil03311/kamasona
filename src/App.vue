@@ -72,6 +72,12 @@ body {
     #000C calc(var(--gradient-size) * 2));
   font-size: 6vw;
   font-weight: 800;
+  transition: 4s;
+
+  pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 
   display: grid;
   place-items: center;
@@ -261,6 +267,11 @@ export default {
     }
   },
   mounted() {
+    setTimeout(()=> {
+      document.getElementById("instructions").style
+        .setProperty("opacity", 0);
+    }, 2000);
+
     this.rowStates = new Array(this.batches.length)
       .fill(false)
 
